@@ -21,6 +21,14 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->library('pug');
+		   $this->load->vars(array(
+      'title' => 'My Pug View',
+      'authors' => array(
+        'Luke',
+        'Leia',
+        'Lando'
+      )
+    ));
 		$this->pug->view('welcome_message');
 		//$this->load->view('');
 	}
